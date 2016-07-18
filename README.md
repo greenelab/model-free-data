@@ -35,6 +35,21 @@ We created datasets with following attributes:
 
 In total, eight types of datasets were created, which combined the attributes above. For each dataset type, 100 runs were performed resulting in 100 best datasets per type.
 
+## Best datasets
+
+Most users will be interested in only the best datasets, since multiple datasets from the same run may not be independent. The following table shows the average attributes of best datasets. The `One-way(sd)` through `Five-Way(sd)` columns indicate the average accuracy of the top-performing MDR models: 0.5 represents random performance, while 1.0 represents perfect performance.
+
+| n-way | HWE | One-way(sd) | Two-Way(sd) | Three-Way(sd) | Four-Way(sd) | Five-Way(sd) | name       |
+|-------|-----|-------------|-------------|---------------|--------------|--------------|-------------------|
+| Three | No  | .502(.001)  | .511(.007)  | .886(.023)    |              |              | threewayBests     |
+| Three | Yes | .504(.002)  | .509(.003)  | .680(.024)    |              |              | HWthreewayBests   |
+| Four  | No  | .502(.001)  | .510(.003)  | -             | .897(.018)   |              | fourwayBests      |
+| Four  | Yes | .507(.003)  | .513(.003)  | -             | .673(.009)   |              | HWfourwayBests    |
+| Four  | No  | .501(.000)  | .504(.001)  | .518(.003)    | .567(.010)   |              | fourwayNoLowBests |
+| Five  | No  | .502(.001)  | .510(.002)  | -             | -            | .895(.009)   | fivewayBests      |
+| Five  | Yes | .511(.003)  | .518(.003)  | -             | -            | .693(.008)   | HWfivewayBests    |
+| Five  | No  | .503(.001)  | .508(.001)  | .518(.002)    | .543(.004)   | .690(.008)   | fivewayNoLowBests |
+
 ## License
 
 No rights reserved. This repository including its datasets are released under the CC0 Public Domain Dedication (see [`LICENSE.md`](LICENSE.md)).
