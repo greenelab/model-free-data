@@ -10,7 +10,7 @@ _BioData Mining_ (2011) DOI: 10.1186/1756-0381-4-21
 Casey S. Greene, Daniel S. Himmelstein, Jason H. Moore<br>
 _Evolutionary Computation, Machine Learning and Data Mining in Bioinformatics_ (2010) DOI: 10.1007/978-3-642-12211-8_7
 
-Previously, this data was hosted at http://discovery.dartmouth.edu/model_free_data/. As of July 2016, this repository is the preferred location as the legacy site is no longer supported.
+Previously, this data was hosted at http://discovery.dartmouth.edu/model_free_data/. In July 2016, the data was migrated to this repository and modernized. The legacy site is no longer supported, use this site instead. The data contents are equivalent, although directory structures, file extensions, and text-file header rows have been refined.
 
 ## Introduction
 
