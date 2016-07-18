@@ -33,22 +33,22 @@ We created datasets with following attributes:
 + **NoLow**. All runs were optimized for having no one-way (marginal) or two-way (pairwise epistatic) associations. NoLow refers to whether, in addition to minimizing 1 and 2-way effects, all lower order effects were minimized. For example, `fivewayNoLow` maximized the 5-way effect, while minimizing 1, 2, 3, and 4-way effects.
 + **HWE**: whether SNPs were optimized to maintain Hardy-Weinberg equilibrium.
 
-In total, eight types of datasets were created, which combined the attributes above. For each dataset type, 100 runs were performed resulting in 100 best datasets per type.
+In total, eight types of datasets were created, which combined the attributes above. For each dataset type, 100 runs were performed resulting in 100 best datasets per type. Most users will be interested in only the best datasets, since multiple datasets from the same run may not be independent.
 
-## Best datasets
+## Access datasets
 
-Most users will be interested in only the best datasets, since multiple datasets from the same run may not be independent. The following table shows the average attributes of best datasets. The `One-way(sd)` through `Five-Way(sd)` columns indicate the average accuracy of the top-performing MDR models: 0.5 represents random performance, while 1.0 represents perfect performance.
+The following table links to repository location with the datasets for a given attribute combination.
 
-| n-way | HWE | One-way(sd) | Two-Way(sd) | Three-Way(sd) | Four-Way(sd) | Five-Way(sd) | name       |
-|-------|-----|-------------|-------------|---------------|--------------|--------------|-------------------|
-| Three | No  | .502(.001)  | .511(.007)  | .886(.023)    |              |              | threewayBests     |
-| Three | Yes | .504(.002)  | .509(.003)  | .680(.024)    |              |              | HWthreewayBests   |
-| Four  | No  | .502(.001)  | .510(.003)  | -             | .897(.018)   |              | fourwayBests      |
-| Four  | Yes | .507(.003)  | .513(.003)  | -             | .673(.009)   |              | HWfourwayBests    |
-| Four  | No  | .501(.000)  | .504(.001)  | .518(.003)    | .567(.010)   |              | fourwayNoLowBests |
-| Five  | No  | .502(.001)  | .510(.002)  | -             | -            | .895(.009)   | fivewayBests      |
-| Five  | Yes | .511(.003)  | .518(.003)  | -             | -            | .693(.008)   | HWfivewayBests    |
-| Five  | No  | .503(.001)  | .508(.001)  | .518(.002)    | .543(.004)   | .690(.008)   | fivewayNoLowBests |
+| SNPs | 1-Way | 2-Way | 3-Way    | 4-Way    | 5-Way | HWE | Name                              |
+|------|-------|-------|----------|----------|-------|-----|-----------------------------------|
+| 3    | No    | No    | Yes      |          |       | No  | [threeway](data/threeway)         |
+| 3    | No    | No    | Yes      |          |       | Yes | [HWthreeway](data/HWthreeway)     |
+| 4    | No    | No    | Possibly | Yes      |       | No  | [fourway](data/fourway)           |
+| 4    | No    | No    | Possibly | Yes      |       | Yes | [HWfourway](data/HWfourway)       |
+| 4    | No    | No    | No       | Yes      |       | No  | [fourwayNoLow](data/fourwayNoLow) |
+| 5    | No    | No    | Possibly | Possibly | Yes   | No  | [fiveway](data/fiveway)           |
+| 5    | No    | No    | Possibly | Possibly | Yes   | Yes | [HWfiveway](data/HWfiveway)       |
+| 5    | No    | No    | No       | No       | Yes   | No  | [fivewayNoLow](data/fivewayNoLow) |
 
 ## License
 
