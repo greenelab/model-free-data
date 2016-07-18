@@ -37,7 +37,7 @@ In total, eight types of datasets were created, which combined the attributes ab
 
 ## Access datasets
 
-The following table links to repository location with the datasets for a given attribute combination.
+The following table links to repository location with the datasets for a given attribute combination. SNPs refers to the number of SNPs in each dataset. 1-Way through 5-Way indicate whether associations of that order exist: No means datasets were evolved _not to have_ that effect; Yes means datasets were evolved _to have_ that effect; and Possibly means datasets were not optimized for that effect.
 
 | SNPs | 1-Way | 2-Way | 3-Way    | 4-Way    | 5-Way | HWE | Name                              |
 |------|-------|-------|----------|----------|-------|-----|-----------------------------------|
