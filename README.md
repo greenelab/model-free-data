@@ -12,6 +12,29 @@ _Evolutionary Computation, Machine Learning and Data Mining in Bioinformatics_ (
 
 Previously, this data was hosted at http://discovery.dartmouth.edu/model_free_data/. As of July 2016, this repository is the preferred location as the legacy site is no longer supported.
 
+## Introduction
+
+This repository contains genetics datasets simulated to be complex. Each dataset contains 3,000 observations (rows), which represent samples/subjects for a genetic association study. Subjects are classified as cases (i.e. diseased when `Class` column is `1`) or controls (i.e. healthy when `Class` column is `0`). The remaining columns (e.g. `X1`, `X2`, `X3`) represent biallelic SNPs and are coded as `0` for homozygous, `1` for heterozygous, and `2` for homozygous of the alternate allele. Datasets were created with 3, 4, and 5 SNPs. For example, a subset of a 5 SNP dataset looks like:
+
+| X1 | X2 | X3 | X4 | X5 | Class |
+|----|----|----|----|----|-------|
+| 0  | 1  | 1  | 1  | 1  | 0     |
+| 0  | 0  | 0  | 1  | 0  | 0     |
+| 2  | 1  | 1  | 2  | 0  | 0     |
+| 1  | 1  | 0  | 1  | 0  | 1     |
+| 1  | 1  | 1  | 1  | 2  | 1     |
+| 1  | 2  | 2  | 0  | 0  | 1     |
+
+Datasets were created using an evolution strategy. Each run used a population size of 1,000 (number of datasets) and evolved for 2,000 generations. Each generation consisted of introducing mutations and selecting to survive datasets that were optimal for at least one attribute. Only the datasets from the final generation of a run were retained. From the 2,000 final datasets yielded by a run, a single "best" dataset was chosen.
+
+We created datasets with following attributes:
+
++ **n-way**: the number of SNPs in the dataset, ranging from 3–5. The joint-predictiveness of all SNPs was maximized, while the predictiveness of lower order SNP-combinations was minimized.
++ **NoLow**. All runs were optimized for having no one-way (marginal) or two-way (pairwise epistatic) associations. NoLow refers to whether, in addition to minimizing 1 and 2-way effects, all lower order effects were minimized. For example, `fivewayNoLow` maximized the 5-way effect, while minimizing 1, 2, 3, and 4-way effects.
++ **HWE**: whether SNPs were optimized to maintain Hardy-Weinberg equilibrium.
+
+In total, eight types of datasets were created, which combined the attributes above. For each dataset type, 100 runs were performed resulting in 100 best datasets per type.
+
 ## License
 
 No rights reserved. This repository including its datasets are released under the CC0 Public Domain Dedication (see [`LICENSE.md`](LICENSE.md)).
