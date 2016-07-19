@@ -2,9 +2,10 @@
 
 This repository contains the data for the following two studies:
 
-1. [**Evolving hard problems: Generating human genetics datasets with a complex etiology**](https://doi.org/b44mk9)<br>
+1. [**Evolving hard problems: Generating human genetics datasets with a complex etiology**](https://doi.org/b44mk9) (_Prefered Citation_)<br>
 Daniel S. Himmelstein, Casey S. Greene, Jason H. Moore<br>
-_BioData Mining_ (2011) DOI: 10.1186/1756-0381-4-21
+_BioData Mining_ (2011) DOI: 10.1186/1756-0381-4-21<br>
+
 
 2. [**A Model Free Method to Generate Human Genetics Datasets with Complex Gene-Disease Relationships**](https://doi.org/czh822)<br>
 Casey S. Greene, Daniel S. Himmelstein, Jason H. Moore<br>
@@ -25,7 +26,7 @@ This repository contains genetics datasets simulated to be complex. Each dataset
 | 1  | 1  | 1  | 1  | 2  | 1     |
 | 1  | 2  | 2  | 0  | 0  | 1     |
 
-Datasets were created using an evolution strategy. Each run used a population size of 1,000 (number of datasets) and evolved for 2,000 generations. Each generation consisted of introducing mutations and selecting to survive datasets that were optimal for at least one attribute. Only the datasets from the final generation of a run were retained. From the 2,000 final datasets yielded by a run, a single "best" dataset was chosen.
+Datasets were created using an evolution strategy. Each run used a population size of 1,000 (number of datasets) and evolved for 2,000 generations. Each generation consisted of introducing mutations and selecting to survive datasets that were optimal for at least one attribute. Only the Pareto-optimal datasets from the final generation of a run were retained. From the Pareto-optimal datasets yielded by a run, a single "best" dataset was chosen.
 
 We created datasets with following attributes:
 
@@ -33,7 +34,7 @@ We created datasets with following attributes:
 + **NoLow**. All runs were optimized for having no one-way (marginal) or two-way (pairwise epistatic) associations. NoLow refers to whether, in addition to minimizing 1 and 2-way effects, all lower order effects were minimized. For example, `fivewayNoLow` maximized the 5-way effect, while minimizing 1, 2, 3, and 4-way effects.
 + **HWE**: whether SNPs were optimized to maintain Hardy-Weinberg equilibrium.
 
-In total, eight types of datasets were created, which combined the attributes above. For each dataset type, 100 runs were performed resulting in 100 best datasets per type. Most users will be interested in only the best datasets, since multiple datasets from the same run may not be independent.
+In total, eight types of datasets were created, which combined the attributes above. For each dataset type, 100 runs were performed resulting in 100 best datasets per type. Most users will be interested in only the best datasets, since multiple datasets from the same run (set) may not be independent.
 
 ## Access datasets
 
@@ -49,6 +50,10 @@ The following table links to repository location with the datasets for a given a
 | 5    | No    | No    | Possibly | Possibly | Yes   | No  | [fiveway](data/fiveway)           |
 | 5    | No    | No    | Possibly | Possibly | Yes   | Yes | [HWfiveway](data/HWfiveway)       |
 | 5    | No    | No    | No       | No       | Yes   | No  | [fivewayNoLow](data/fivewayNoLow) |
+
+## Need help?
+
+If you have any questions or feedback, please submit an [Issue on GitHub](https://github.com/greenelab/model-free-data/issues "Issues for greenelab/model-free-data").
 
 ## License
 
