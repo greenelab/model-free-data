@@ -4,7 +4,7 @@ This repository contains the data for the following two studies:
 
 1. [**Evolving hard problems: Generating human genetics datasets with a complex etiology**](https://doi.org/b44mk9) (_Prefered Citation_)<br>
 Daniel S. Himmelstein, Casey S. Greene, Jason H. Moore<br>
-_BioData Mining_ (2011) DOI: 10.1186/1756-0381-4-21<br>
+_BioData Mining_ (2011) DOI: 10.1186/1756-0381-4-21 · PMID: 21736753 · PMCID: PMC3154150<br>
 
 
 2. [**A Model Free Method to Generate Human Genetics Datasets with Complex Gene-Disease Relationships**](https://doi.org/czh822)<br>
